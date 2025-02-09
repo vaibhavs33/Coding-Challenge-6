@@ -62,3 +62,25 @@ console.log(`Bonus: $${calculateBonus(5000, "Excellent")}`);
 
 //Logging the bonus for a salary of $7000 with a good performance rating
 console.log(`Bonus: $${calculateBonus(7000, "Good")}`);
+
+//Task 4 - Subscription Pricing Model
+
+//Function to calculate the subscripton cost based on the type of plan, the duration, and the discount
+let calculateSubscriptionCost = function(plan, months, discount = 0) {
+
+    //Defining the rates for the different plans
+    let rates = { "Basic": 10, "Premium": 20, "Enterprise": 50 };
+
+    //Multiplying the rate by months and applying the discount
+    let totalCost = (rates[plan] * months) - discount;
+
+    //Returning the total cost
+    return totalCost;
+};
+
+//Test Cases - Values can be changed
+//Logging the cost of the Basic plan for 6 months with a $10 discount to the console
+console.log(`Total cost: $${calculateSubscriptionCost("Basic", 6, 10)}`);
+
+//Logging the cost of the Premium plan for 12 months with no discount to the console
+console.log(`Total cost: $${calculateSubscriptionCost("Premium", 12, 0)}`);
