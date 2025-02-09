@@ -34,3 +34,31 @@ console.log(`Sales tax: $${calculateSalesTax(100, 0.07)}`);
 
 //Logging the sales tax for a $500 amount at a 10% tax rate to the console
 console.log(`Sales tax: $${calculateSalesTax(500, 0.1)}`);
+
+//Task 3 - Employee Bonus Calculation
+
+//Arrow function to calculate the employee bonus based on the performance rating
+let calculateBonus = (salary, performanceRating)=> {
+
+    //Declaring the bonus variable
+    let bonus;
+
+    //Determining the bonus percentage based on performance rating
+    if (performanceRating === "Excellent") {
+        bonus = salary * 0.20; //20% bonus for an excellent rating
+    } else if (performanceRating === "Good") {
+        bonus = salary * 0.10; //10% bonus for a good rating
+    } else if (performanceRating === "Average") {
+        bonus = salary * 0.05; //5% bonus for an average rating
+    }
+
+    //Returning the bonus
+    return bonus;
+};
+
+//Test Cases - Values can be changed
+//Logging the bonus for a salary of $5000 with an excellent performance rating
+console.log(`Bonus: $${calculateBonus(5000, "Excellent")}`);
+
+//Logging the bonus for a salary of $7000 with a good performance rating
+console.log(`Bonus: $${calculateBonus(7000, "Good")}`);
