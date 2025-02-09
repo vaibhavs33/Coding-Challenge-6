@@ -145,3 +145,26 @@ console.log(`Total expenses: ${tracker(200)}`);
 
 //Logging the total expense after adding $150 to the console
 console.log(`Total expenses: ${tracker(150)}`);
+
+//Task 8 - Employee Promotion Evaluation
+
+//Recursive function to calculate the years needed to reach level 10
+function calculateYearsToPromotion(employeeLevel) {
+    //No years needed if it's already at level 10 or above
+    if (employeeLevel >= 10) {
+        return "Years to Level 10: 0";
+    }
+
+    //Each promotion takes 2 years
+    let years = (10 - employeeLevel) * 2;
+
+    //Returning years
+    return years;
+};
+
+//Test Cases - Values can be changed
+//Logging the years needed for a level 7 employee to reach level 10 to the console
+console.log(`Years to Level 10: ${calculateYearsToPromotion(7)}`);
+
+//Logging the years needed for a level 5 employee to reach level 10 to the console
+console.log(`Years to Level 10: ${calculateYearsToPromotion(5)}`);
