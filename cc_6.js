@@ -84,3 +84,22 @@ console.log(`Total cost: $${calculateSubscriptionCost("Basic", 6, 10)}`);
 
 //Logging the cost of the Premium plan for 12 months with no discount to the console
 console.log(`Total cost: $${calculateSubscriptionCost("Premium", 12, 0)}`);
+
+//Task 5 - Currency Conversion
+
+//Function to convert currency based on the exchange rate
+let convertCurrency = function(amount, exchangeRate) {
+
+    //Multiplying the amount by the exchange rate and rounding it to 2 decimal places
+    let convertedAmount = (amount * exchangeRate).toFixed(2);
+
+    //Returning the converted amount
+    return convertedAmount;
+};
+
+//Test Cases - Values can be changed
+//Logging the conversion of $100 with an exchange rate of 1.1 to the console
+console.log(`Converted amount: $${convertCurrency(100, 1.1)}`);
+
+//Logging the conversion of $250 with an exchange rate of 0.85 to the console
+console.log(`Converted amount: $${convertCurrency(250, 0.85)}`);
